@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#030604">
+<title>TuwaiqOS — Independent at the core</title>
+<meta name="description" content="TuwaiqOS is an independent Saudi-built experimental operating system written in Rust.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">تخطي إلى المحتوى</a>
+
+<!-- News ticker -->
+<div class="newsTicker" role="marquee" aria-label="TuwaiqOS status ticker">
+  <div class="tickerTag">LIVE</div>
+  <div class="tickerViewport"><div class="tickerTrack"></div></div>
+</div>
+
+<main id="main-content">
+  <section class="hero shell">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="TuwaiqOS home">
+        <span class="mark">T</span>
+        <span>TuwaiqOS</span>
+      </a>
+      <div class="navlinks">
+        <a href="#progress">Progress</a>
+        <a href="roadmap/index.html">Roadmap</a>
+        <a href="contributors/index.html">Contributors</a>
+        <a href="download/index.html">Download</a>
+      </div>
+      <a class="navcta" href="https://github.com/italamrii/TuwaiqOS" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+
+    <div class="heroGrid">
+      <div>
+        <div class="eyebrow"><span class="pulse"></span> PHASE 6 COMPLETE · DEVELOPMENT BUILD</div>
+        <h1>نواة مستقلة.<br><span>نظام سعودي يُبنى من الصفر.</span></h1>
+        <p class="lead">TuwaiqOS نظام تشغيل تجريبي مفتوح المصدر بنواة مستقلة مكتوبة بـ Rust. وصلنا من الإقلاع الأول إلى العزل، تعدد المهام، سطح المكتب، والآن طبقة التخزين وVFS وتشغيل التطبيقات من نظام الملفات.</p>
+        <div class="actions">
+          <a class="primary" href="download/index.html">تحميل وتجربة النظام</a>
+          <a class="secondary" href="roadmap/index.html">استكشف خارطة الطريق</a>
+        </div>
+      </div>
+      <div class="terminalCard" tabindex="0" aria-label="TuwaiqOS boot status">
+        <div class="terminalHead">
+          <span></span><span></span><span></span>
+          <b>tuwaiq://kernel/status</b>
+        </div>
+<pre>TuwaiqOS kernel_main: booting
+[ OK ] paging + NX
+[ OK ] scheduler / preemption
+[ OK ] Ring 3 / process isolation
+[ OK ] VFS root mounted
+[ OK ] filesystem app path
+[ OK ] desktop foundation
+
+phase6: COMPLETE
+next: hardware + networking_</pre>
+      </div>
+    </div>
+
+    <div class="factbar">
+      <div><strong>x86_64</strong><span>Target architecture</span></div>
+      <div><strong>Rust</strong><span>Kernel language</span></div>
+      <div><strong>100 Hz</strong><span>Kernel timer</span></div>
+      <div><strong>Ring 3</strong><span>User isolation</span></div>
+    </div>
+  </section>
+
+  <section class="section shell" id="progress">
+    <div class="sectionHead">
+      <div>
+        <div class="kicker">BUILD STATUS / 06</div>
+        <h2>من Kernel إلى نظام قابل للاستخدام</h2>
+      </div>
+      <p>كل مرحلة هنا مبنية فوق التي قبلها، مع اختبارات QEMU وعزل حقيقي بين النواة وبرامج المستخدم.</p>
+    </div>
+    <div class="phaseGrid">
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>01</span><b>COMPLETE ✓</b></div>
+        <h3>Interrupt Architecture</h3>
+        <p>Real x86_64 interrupts, GDT/TSS, PIC/PIT and interrupt-driven input.</p>
+      </article>
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>02</span><b>COMPLETE ✓</b></div>
+        <h3>Memory Management</h3>
+        <p>Paging, physical frame allocation and a mapped kernel heap.</p>
+      </article>
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>03</span><b>COMPLETE ✓</b></div>
+        <h3>Concurrency</h3>
+        <p>Real task stacks, context switching and timer-driven preemption.</p>
+      </article>
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>04</span><b>COMPLETE ✓</b></div>
+        <h3>User Mode</h3>
+        <p>Ring 3, syscalls, isolated address spaces and ELF user processes.</p>
+      </article>
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>05</span><b>COMPLETE ✓</b></div>
+        <h3>Desktop Foundation</h3>
+        <p>Display, mouse, unified input and the first Ring-3 Tuwaiq Desktop.</p>
+      </article>
+      <article class="phase" tabindex="0">
+        <div class="phaseTop"><span>06</span><b>COMPLETE ✓</b></div>
+        <h3>Storage, VFS &amp; Apps</h3>
+        <p>VFS, path-aware storage and filesystem-backed native application foundations.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="phase6 shell">
+    <div class="phase6Label">LATEST MILESTONE</div>
+    <div class="phase6Content">
+      <div>
+        <span class="big06">06</span>
+        <h2>Storage, VFS<br>&amp; Real Applications</h2>
+      </div>
+      <div class="checklist">
+        <p><span>✓</span> VFS and root filesystem foundation</p>
+        <p><span>✓</span> Path-aware filesystem operations</p>
+        <p><span>✓</span> User ↔ kernel file ABI foundation</p>
+        <p><span>✓</span> Filesystem-backed native app path</p>
+        <p><span>✓</span> Kernel health and QEMU smoke validation</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="next shell">
+    <span class="kicker">NEXT / PHASE 7</span>
+    <h2>Hardware &amp; Networking.</h2>
+    <p>الخطوة القادمة تنقل TuwaiqOS أقرب للجهاز الحقيقي: طبقة تعريفات منظمة، اكتشاف العتاد، الشبكات وبناء أساس للتوسع على فئات أجهزة متعددة.</p>
+    <a href="roadmap/index.html">شاهد الخطة الكاملة ←</a>
+  </section>
+
+  <footer class="footer shell">
+    <div class="brand"><span class="mark">T</span><span>TuwaiqOS</span></div>
+    <p>Independent at the core. Compatible by design.</p>
+    <div>
+      <a href="https://t.me/TuwaiqOS" target="_blank" rel="noreferrer">Telegram</a>
+      <a href="https://github.com/italamrii/TuwaiqOS" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+</main>
+<script src="assets/script.js"></script>
+</body>
+</html>
