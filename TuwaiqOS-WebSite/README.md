@@ -5,8 +5,9 @@ The official website for TuwaiqOS, a Saudi open source operating system built fr
 ## Preview
 ![TuwaiqOS Website Preview](TuwaiqOSWebSite-pic.png)
 
-Visit TuwaiqOS Website:
-tuwaiqos.site.je
+## Live Website
+
+[Visit the official TuwaiqOS Website →](https://tuwaiqos.site.je)
 
 My Role
 
